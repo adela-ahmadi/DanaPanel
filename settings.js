@@ -61,3 +61,9 @@ securityForm?.addEventListener("submit", (event) => {
     securityForm.classList.remove("was-validated");
     showToast("Password validation passed (demo only).", "bi-shield-check");
   });
+ securityForm
+    ?.querySelectorAll("input")
+    .forEach((input) =>
+      input.addEventListener("input", () => input.setCustomValidity("")),
+    );
+}
