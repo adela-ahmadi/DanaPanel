@@ -38,3 +38,26 @@ function initSettingsPage() {
     document.body.classList.toggle("compact-mode", settings.compactMode);
     showToast("Preferences saved.");
   });
+securityForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearCustomValidation(securityForm);
+    const newPassword = securityForm.elements.newPassword;
+    const confirmPassword = securityForm.elements.confirmPassword;
+    const strongPassword = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+    if (!strongPassword.test(newPassword.value)) {
+      newPassword.setCustomValidity(
+        "Use 8+ characters with one capital letter and one number.",
+      );
+    }
+    if (confirmPassword.value !== newPassword.value) {
+      confirmPassword.setCustomValidity("Passwords do not match.");
+    }
+
+    securityForm.classList.add("was-validated");
+    if (!securityForm.checkValidity()) return;
+
+    securityForm.reset();
+    securityForm.classList.remove("was-validated");
+    showToast("Password validation passed (demo only).", "bi-shield-check");
+  });
