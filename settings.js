@@ -22,3 +22,19 @@ function initSettingsPage() {
         document.body.classList.toggle("compact-mode", control.checked);
     });
   });
+ preferencesForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(preferencesForm);
+    settings = {
+      ...settings,
+      emailNotifications: formData.has("emailNotifications"),
+      courseUpdates: formData.has("courseUpdates"),
+      weeklyReport: formData.has("weeklyReport"),
+      compactMode: formData.has("compactMode"),
+      language: formData.get("language"),
+      timezone: formData.get("timezone"),
+    };
+    saveData(STORAGE_KEYS.settings, settings);
+    document.body.classList.toggle("compact-mode", settings.compactMode);
+    showToast("Preferences saved.");
+  });
