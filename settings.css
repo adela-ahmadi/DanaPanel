@@ -535,3 +535,59 @@ textarea {
   position: relative;
   min-height: 235px;
 }
+/* Bootstrap component refinements */
+.btn {
+  border-radius: 0.78rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--dana-blue), var(--dana-navy));
+  border-color: transparent;
+  box-shadow: 0 9px 22px rgba(29, 75, 159, 0.2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, #2758b0, #173983);
+  border-color: transparent;
+}
+
+.btn-coral {
+  color: #fff;
+  background: linear-gradient(135deg, var(--dana-coral), #e94a50);
+  border: 0;
+  box-shadow: 0 9px 22px rgba(255, 93, 87, 0.2);
+}
+
+.btn-coral:hover {
+  color: #fff;
+  background: #e94a50;
+}
+.btn-soft {
+  color: var(--dana-blue);
+  background: rgba(29, 75, 159, 0.08);
+  border-color: rgba(29, 75, 159, 0.1);
+}
+
+.form-control,
+.form-select {
+  min-height: 44px;
+  border-color: #dfe5ef;
+  border-radius: 0.78rem;
+}
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: rgba(29, 75, 159, 0.45);
+  box-shadow: 0 0 0 0.25rem rgba(29, 75, 159, 0.09);
+}
+.form-check-input:checked {
+  background-color: var(--dana-blue);
+  border-color: var(--dana-blue);
+}
+.form-label {
+  margin-bottom: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
