@@ -114,3 +114,17 @@ textarea {
   outline: 3px solid rgba(255, 93, 87, 0.32);
   outline-offset: 2px;
 }
+.app-wrapper {
+  min-height: 100vh;
+}
+
+.app-frame {
+  min-height: calc(100vh - 2rem);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.78);
+  border-radius: 1.75rem;
+  box-shadow: 0 24px 70px rgba(19, 43, 88, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
