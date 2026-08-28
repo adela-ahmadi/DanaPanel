@@ -265,3 +265,129 @@ textarea {
 .semester-card .progress-bar {
   background: linear-gradient(90deg, var(--dana-blush), var(--dana-coral));
 }
+
+/* Top bar and common content */
+.dashboard-main {
+  min-width: 0;
+  background: rgba(247, 249, 254, 0.6);
+}
+
+.topbar {
+  z-index: 1010;
+  margin: 0.95rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--dana-glass);
+  border: 1px solid var(--dana-border);
+  border-radius: 1.15rem;
+  box-shadow: 0 10px 35px rgba(19, 43, 88, 0.07);
+  backdrop-filter: blur(20px) saturate(145%);
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
+}
+
+.page-heading h1 {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.page-heading p {
+  margin: 0;
+  color: var(--dana-muted);
+  font-size: 0.78rem;
+}
+
+.mobile-menu-btn,
+.icon-button {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--dana-navy);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 75, 159, 0.09);
+  border-radius: 50%;
+}
+
+.mobile-menu-btn:hover,
+.icon-button:hover {
+  color: #fff;
+  background: var(--dana-blue);
+}
+
+.search-control {
+  position: relative;
+  width: min(310px, 32vw);
+}
+
+.search-control i {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  z-index: 2;
+  color: #98a3b9;
+  transform: translateY(-50%);
+}
+
+.search-control .form-control {
+  min-height: 42px;
+  padding-left: 2.55rem;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(29, 75, 159, 0.09);
+  border-radius: 999px;
+}
+
+.search-control .form-control:focus {
+  background: #fff;
+  border-color: rgba(29, 75, 159, 0.28);
+  box-shadow: 0 0 0 0.25rem rgba(29, 75, 159, 0.08);
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--dana-coral);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.notification-menu {
+  width: min(340px, calc(100vw - 2rem));
+  padding: 0.7rem;
+  border: 1px solid rgba(29, 75, 159, 0.09);
+  border-radius: 1rem;
+  box-shadow: var(--dana-shadow);
+}
+
+.notification-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.7rem;
+  border-radius: 0.8rem;
+}
+
+.notification-item:hover {
+  background: var(--dana-ice);
+}
+
+.notification-icon {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #fff;
+  background: var(--dana-blue);
+  border-radius: 0.7rem;
+}
+
+.notification-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.notification-item small {
+  color: var(--dana-muted);
+}
