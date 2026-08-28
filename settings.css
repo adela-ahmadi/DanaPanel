@@ -699,3 +699,90 @@ textarea {
 .compact-mode .content-area {
   padding-inline: 0.65rem;
 }
+@media (max-width: 991.98px) {
+  .app-wrapper {
+    padding: 0 !important;
+  }
+  .app-frame {
+    min-height: 100vh;
+    margin: 0 !important;
+    border-radius: 0;
+  }
+  .sidebar-panel {
+    border-radius: 0 1.5rem 1.5rem 0;
+  }
+  .topbar {
+    margin: 0.75rem;
+  }
+  .content-area {
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .search-control {
+    order: 3;
+    width: 100%;
+  }
+  .topbar .container-fluid {
+    flex-wrap: wrap;
+  }
+  .user-chip .user-copy {
+    display: none;
+  }
+  .chart-box {
+    min-height: 235px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-heading p {
+    display: none;
+  }
+  .glass-card .card-body,
+  .glass-card .card-header {
+    padding-inline: 1rem;
+  }
+  .stat-value {
+    font-size: 1.35rem;
+  }
+  .progress-ring {
+    width: 76px;
+    height: 76px;
+  }
+  .progress-ring::before {
+    width: 59px;
+    height: 59px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Settings page: preference rows. */
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(16, 45, 115, 0.08);
+}
+
+.setting-row:last-child {
+  border-bottom: 0;
+}
+.setting-row p {
+  margin: 0.2rem 0 0;
+  color: var(--dana-muted);
+  font-size: 0.75rem;
+}
