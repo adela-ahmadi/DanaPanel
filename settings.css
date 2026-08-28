@@ -669,3 +669,33 @@ textarea {
   white-space: nowrap;
 }
 
+.empty-state {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.empty-state i {
+  color: #c0c8d7;
+  font-size: 2.5rem;
+}
+
+.toast-container {
+  z-index: 2000;
+}
+
+.dana-toast {
+  overflow: hidden;
+  background: rgba(16, 45, 115, 0.96);
+  border: 0;
+  border-radius: 0.95rem;
+  box-shadow: 0 16px 45px rgba(16, 45, 115, 0.24);
+}
+
+.dana-toast .toast-body {
+  color: #fff;
+}
+.compact-mode .glass-card .card-body {
+  padding: 0.9rem;
+}
+.compact-mode .content-area {
+  padding-inline: 0.65rem;
+}
