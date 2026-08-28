@@ -163,3 +163,56 @@
               </div>
             </div>
           </nav>
+             <div class="container-fluid content-area">
+            <section class="card glass-card border-0">
+              <div class="card-header">
+                <h2 class="section-title">Dashboard Settings</h2>
+                <p class="section-copy small mb-0">
+                  Preferences are saved in your browser.
+                </p>
+              </div>
+              <div class="card-body">
+                <ul
+                  class="nav nav-pills gap-2 mb-4"
+                  id="settingsTabs"
+                  role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="preferences-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#preferencesPane"
+                      type="button"
+                      role="tab"
+                      aria-controls="preferencesPane"
+                      aria-selected="true">
+                      <i class="bi bi-sliders2 me-1"></i>Preferences
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="security-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#securityPane"
+                      type="button"
+                      role="tab"
+                      aria-controls="securityPane"
+                      aria-selected="false">
+                      <i class="bi bi-shield-lock-fill me-1"></i>Security
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="about-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#aboutPane"
+                      type="button"
+                      role="tab"
+                      aria-controls="aboutPane"
+                      aria-selected="false">
+                      <i class="bi bi-info-circle-fill me-1"></i>About
+                    </button>
+                  </li>
+                </ul>
