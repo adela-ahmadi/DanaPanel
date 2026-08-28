@@ -447,6 +447,7 @@ body.dark-mode .security-btn {
         align-items: flex-start;
         gap: 20px;
     }
+    
 }
 @media (max-width: 576px) {
     .main-content {
