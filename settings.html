@@ -85,3 +85,81 @@
             </div>
           </div>
         </aside>
+           <main class="col dashboard-main min-vh-100">
+          <nav class="navbar topbar sticky-top" aria-label="Top navigation">
+            <div class="container-fluid gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button
+                  class="mobile-menu-btn d-lg-none"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#dashboardSidebar"
+                  aria-controls="dashboardSidebar"
+                  aria-label="Open menu">
+                  <i class="bi bi-list fs-4"></i>
+                </button>
+                <div class="page-heading">
+                  <h1 class="mb-0">Settings</h1>
+                  <p>Customize your dashboard preferences.</p>
+                </div>
+              </div>
+              <form
+                class="search-control ms-md-auto"
+                role="search"
+                data-global-search-form>
+                <i class="bi bi-search"></i
+                ><input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search students..."
+                  aria-label="Search students" />
+                <button class="visually-hidden" type="submit">Search</button>
+              </form>
+              <div class="d-flex align-items-center gap-2">
+                <div class="dropdown">
+                  <button
+                    class="icon-button position-relative"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-label="View notifications">
+                    <i class="bi bi-bell-fill"></i
+                    ><span class="notification-dot"></span>
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-end notification-menu">
+                    <div
+                      class="d-flex justify-content-between align-items-center px-2 py-1">
+                      <h6 class="mb-0">Notifications</h6>
+                      <span class="badge-soft-coral">3 new</span>
+                    </div>
+                    <div class="notification-item mt-2">
+                      <span class="notification-icon"
+                        ><i class="bi bi-person-plus-fill"></i
+                      ></span>
+                      <div>
+                        <p>Three students joined Web Development.</p>
+                        <small>12 minutes ago</small>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <span class="notification-icon icon-coral"
+                        ><i class="bi bi-file-earmark-bar-graph-fill"></i
+                      ></span>
+                      <div>
+                        <p>The monthly report is ready.</p>
+                        <small>2 hours ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="user-chip" href="profile.html"
+                  ><span class="avatar" data-admin-avatar>AA</span
+                  ><span class="user-copy"
+                    ><strong data-admin-name>Adela Ahmadi</strong
+                    ><small data-admin-role>Administrator</small></span
+                  ></a
+                >
+              </div>
+            </div>
+          </nav>
