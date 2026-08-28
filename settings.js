@@ -12,3 +12,13 @@ function initSettingsPage() {
     if (control.type === "checkbox") control.checked = Boolean(value);
     else control.value = value;
   });
+  settingsPage.querySelectorAll("[data-live-setting]").forEach((control) => {
+    control.addEventListener("change", () => {
+      const value =
+        control.type === "checkbox" ? control.checked : control.value;
+      settings = { ...settings, [control.name]: value };
+      saveData(STORAGE_KEYS.settings, settings);
+      if (control.name === "compactMode")
+        document.body.classList.toggle("compact-mode", control.checked);
+    });
+  });
