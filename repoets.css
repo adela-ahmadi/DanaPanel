@@ -189,3 +189,44 @@ textarea {
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
+sidebar-panel .sidebar-nav {
+  /* Pull the menu to the sidebar edge like the reference design. */
+  margin-right: -1rem;
+}
+
+.sidebar-panel .sidebar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 40px;
+  padding: 0.55rem 0.85rem;
+  color: rgba(255, 255, 255, 0.82);
+  border-radius: 999px 0 0 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.sidebar-panel .sidebar-nav .nav-link i {
+  width: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.sidebar-panel .sidebar-nav .nav-link:hover,
+.sidebar-panel .sidebar-nav .nav-link:focus-visible,
+.sidebar-panel .sidebar-nav .nav-link.active {
+  color: var(--dana-navy);
+  background: #fff;
+  box-shadow: none;
+  transform: none;
+}
+
+.sidebar-panel .sidebar-nav .nav-link:hover i,
+.sidebar-panel .sidebar-nav .nav-link:focus-visible i,
+.sidebar-panel .sidebar-nav .nav-link.active i {
+  color: var(--dana-navy);
+}
