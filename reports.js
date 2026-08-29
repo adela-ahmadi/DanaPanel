@@ -109,3 +109,137 @@ function renderReportCharts(students, months) {
 
   enrollmentChart?.destroy();
   performanceChart?.destroy();
+if (enrollmentCanvas) {
+    enrollmentChart = new Chart(enrollmentCanvas, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "Enrollments",
+            data: baseValues,
+            backgroundColor: [
+              "#ff5d57",
+              "#102d73",
+              "#ffa7a3",
+              "#1d4b9f",
+              "#ff5d57",
+              "#102d73",
+            ].slice(-months),
+            borderRadius: 8,
+            maxBarThickness: 38,
+          },
+        ],
+      },
+      options: getChartOptions(),
+    });
+  }
+
+  if (performanceCanvas) {
+    performanceChart = new Chart(performanceCanvas, {
+      type: "doughnut",
+      data: {
+        labels: summaries.map((item) => item.course),
+        datasets: [
+          {
+            data: summaries.map((item) => item.students),
+            backgroundColor: [
+              "#102d73",
+              "#ff5d57",
+              "#ffa7a3",
+              "#1d4b9f",
+              "#f2a93b",
+            ],
+            borderColor: "#ffffff",
+            borderWidth: 4,
+            hoverOffset: 6,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "68%",
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              usePointStyle: true,
+              padding: 16,
+              font: { family: "DM Sans", size: 11 },
+            },
+          },
+        },
+      },
+    });
+  }
+}
+
+function getChartOptions() {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: "rgba(16, 45, 115, .94)",
+        padding: 11,
+        cornerRadius: 10,
+        titleFont: { family: "Manrope", weight: "700" },
+      },
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        border: { display: false },
+        ticks: { color: "#7d889e" },
+      },
+      y: {
+        beginAtZero: true,
+        grid: { color: "rgba(16, 45, 115, .07)" },
+        border: { display: false },
+        ticks: { color: "#7d889e", precision: 0 },
+      },
+    },
+  };
+}
+
+function exportReportCSV() {
+  const students = loadData(STORAGE_KEYS.students, defaultStudents);
+  const rows = [
+    [
+      "First name",
+      "Last name",
+      "Email",
+      "Role",
+      "Course",
+      "Status",
+      "Enrolled",
+    ],
+    ...students.map((student) => [
+      student.firstName,
+      student.lastName,
+      student.email,
+      student.role,
+      student.course,
+      student.status,
+      student.enrolled,
+    ]),
+  ];
+  const csv = rows
+    .map((row) =>
+      row.map((cell) => "${String(cell).replaceAll('"', '""')}").join(","),
+    )
+    .join("\n");
+  const url = URL.createObjectURL(
+    new Blob([csv], { type: "text/csv;charset=utf-8" }),
+  );
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "danapanel-report.csv";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+  showToast("CSV report downloaded.", "bi-download");
+}
