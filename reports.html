@@ -16,7 +16,153 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    
-</body>
+ <body data-reports-page>
+    <div class="container-fluid app-wrapper py-lg-3 px-lg-0">
+      <div class="row g-0 app-frame mx-lg-3">
+        <aside
+          class="offcanvas-lg offcanvas-start sidebar-panel col-lg-auto"
+          tabindex="-1"
+          id="dashboardSidebar"
+          aria-labelledby="sidebarTitle">
+          <div class="offcanvas-header d-lg-none">
+            <a class="brand-link" href="index.html" id="sidebarTitle"
+              ><span class="brand-mark"><i class="bi bi-layers-fill"></i></span
+              ><span class="brand-name">Dana<span>Panel</span></span></a
+            ><button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#dashboardSidebar"
+              aria-label="Close menu"></button>
+          </div>
+          <div class="offcanvas-body d-flex flex-column p-3">
+            <a class="brand-link d-none d-lg-inline-flex mb-2" href="index.html"
+              ><span class="brand-mark"><i class="bi bi-layers-fill"></i></span
+              ><span class="brand-name">Dana<span>Panel</span></span></a
+            >
+            <p class="sidebar-label">Main menu</p>
+            <nav
+              class="nav nav-pills flex-column gap-1 sidebar-nav"
+              aria-label="Main navigation">
+              <a class="nav-link" href="index.html"
+                ><i class="bi bi-grid-1x2-fill"></i>Overview</a
+              >
+              <a class="nav-link" href="users.html"
+                ><i class="bi bi-people-fill"></i>Students</a
+              >
+              <a class="nav-link active" aria-current="page" href="reports.html"
+                ><i class="bi bi-bar-chart-fill"></i>Reports</a
+              >
+              <a class="nav-link" href="profile.html"
+                ><i class="bi bi-person-circle"></i>My Profile</a
+              >
+            </nav>
+            <p class="sidebar-label">Account</p>
+            <nav
+              class="nav nav-pills flex-column gap-1 sidebar-nav"
+              aria-label="Account navigation">
+              <a class="nav-link" href="settings.html"
+                ><i class="bi bi-gear-fill"></i>Settings</a
+              ><a class="nav-link" href="#" data-logout
+                ><i class="bi bi-box-arrow-right"></i>Log Out</a
+              >
+            </nav>
+            <div class="semester-card mt-lg-auto mt-4">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="mb-0 fs-6">Semester progress</h6>
+                <strong>72%</strong>
+              </div>
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Semester progress"
+                aria-valuenow="72"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 72%"></div>
+              </div>
+              <p class="mt-2 mb-0">18 days left until finals week</p>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col dashboard-main min-vh-100">
+          <nav class="navbar topbar sticky-top" aria-label="Top navigation">
+            <div class="container-fluid gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button
+                  class="mobile-menu-btn d-lg-none"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#dashboardSidebar"
+                  aria-controls="dashboardSidebar"
+                  aria-label="Open menu">
+                  <i class="bi bi-list fs-4"></i>
+                </button>
+                <div class="page-heading">
+                  <h1 class="mb-0">Reports</h1>
+                  <p>Explore enrollment and course performance.</p>
+                </div>
+              </div>
+              <form
+                class="search-control ms-md-auto"
+                role="search"
+                data-global-search-form>
+                <i class="bi bi-search"></i
+                ><input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search students..."
+                  aria-label="Search students" />
+                <button class="visually-hidden" type="submit">Search</button>
+              </form>
+              <div class="d-flex align-items-center gap-2">
+                <div class="dropdown">
+                  <button
+                    class="icon-button position-relative"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-label="View notifications">
+                    <i class="bi bi-bell-fill"></i
+                    ><span class="notification-dot"></span>
+                  </button>
+                  <div
+                    class="dropdown-menu dropdown-menu-end notification-menu">
+                    <div
+                      class="d-flex justify-content-between align-items-center px-2 py-1">
+                      <h6 class="mb-0">Notifications</h6>
+                      <span class="badge-soft-coral">3 new</span>
+                    </div>
+                    <div class="notification-item mt-2">
+                      <span class="notification-icon"
+                        ><i class="bi bi-person-plus-fill"></i
+                      ></span>
+                      <div>
+                        <p>Three students joined Web Development.</p>
+                        <small>12 minutes ago</small>
+                      </div>
+                    </div>
+                    <div class="notification-item">
+                      <span class="notification-icon icon-coral"
+                        ><i class="bi bi-file-earmark-bar-graph-fill"></i
+                      ></span>
+                      <div>
+                        <p>The monthly report is ready.</p>
+                        <small>2 hours ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="user-chip" href="profile.html"
+                  ><span class="avatar" data-admin-avatar>AA</span
+                  ><span class="user-copy"
+                    ><strong data-admin-name>Adela Ahmadi</strong
+                    ><small data-admin-role>Administrator</small></span
+                  ></a
+                >
+              </div>
+            </div>
+          </nav>
 </html>
