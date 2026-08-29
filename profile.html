@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="View and update the DanaPanel administrator profile." />
+
+    <title>My Profile | DanaPanel</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid app-wrapper py-lg-3 px-lg-0">
+      <div class="row g-0 app-frame mx-lg-3">
+        <!-- SIDEBAR -->
+        <aside
+          class="offcanvas-lg offcanvas-start sidebar-panel col-lg-auto"
+          tabindex="-1"
+          id="dashboardSidebar"
+          aria-labelledby="sidebarTitle">
+          <div class="offcanvas-header d-lg-none">
+            <a class="brand-link" href="index.html" id="sidebarTitle">
+              <span class="brand-mark">
+                <i class="bi bi-layers-fill"></i>
+              </span>
+
+              <span class="brand-name"> Dana<span>Panel</span> </span>
+            </a>
+
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              data-bs-target="#dashboardSidebar"
+              aria-label="Close menu"></button>
+          </div>
+
+          <div class="offcanvas-body d-flex flex-column p-3">
+            <a
+              class="brand-link d-none d-lg-inline-flex mb-2"
+              href="index.html">
+              <span class="brand-mark">
+                <i class="bi bi-layers-fill"></i>
+              </span>
+
+              <span class="brand-name"> Dana<span>Panel</span> </span>
+            </a>
+
+            <p class="sidebar-label">Main menu</p>
+
+            <nav
+              class="nav nav-pills flex-column gap-1 sidebar-nav"
+              aria-label="Main navigation">
+              <a class="nav-link" href="index.html">
+                <i class="bi bi-grid-1x2-fill"></i>
+                Overview
+              </a>
+
+              <a class="nav-link" href="users.html">
+                <i class="bi bi-people-fill"></i>
+                Students
+              </a>
+
+              <a class="nav-link" href="reports.html">
+                <i class="bi bi-bar-chart-fill"></i>
+                Reports
+              </a>
+
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="profile.html">
+                <i class="bi bi-person-circle"></i>
+                My Profile
+              </a>
+            </nav>
+
+            <p class="sidebar-label">Account</p>
+
+            <nav
+              class="nav nav-pills flex-column gap-1 sidebar-nav"
+              aria-label="Account navigation">
+              <a class="nav-link" href="settings.html">
+                <i class="bi bi-gear-fill"></i>
+                Settings
+              </a>
+
+              <a class="nav-link" href="#" data-logout>
+                <i class="bi bi-box-arrow-right"></i>
+                Log Out
+              </a>
+            </nav>
+
+            <div class="semester-card mt-lg-auto mt-4">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="mb-0 fs-6">Semester progress</h6>
+                <strong>72%</strong>
+              </div>
+
+              <div
+                class="progress"
+                role="progressbar"
+                aria-label="Semester progress"
+                aria-valuenow="72"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                <div class="progress-bar" style="width: 72%"></div>
+              </div>
+
+              <p class="mt-2 mb-0">18 days left until finals week</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="col dashboard-main min-vh-100">
+          <!-- TOP BAR -->
+          <nav class="navbar topbar sticky-top" aria-label="Top navigation">
+            <div class="container-fluid gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <button
+                  class="mobile-menu-btn d-lg-none"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#dashboardSidebar"
+                  aria-controls="dashboardSidebar"
+                  aria-label="Open menu">
+                  <i class="bi bi-list fs-4"></i>
+                </button>
+
+                <div class="page-heading">
+                  <h1 class="mb-0">My Profile</h1>
+                  <p>Manage your personal and work information.</p>
+                </div>
+              </div>
+
+              <!-- SEARCH -->
+              <form
+                class="search-control ms-md-auto"
+                role="search"
+                data-global-search-form>
+                <i class="bi bi-search"></i>
+
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search students..."
+                  aria-label="Search students" />
+
+                <button class="visually-hidden" type="submit">Search</button>
+              </form>
+
+              <div class="d-flex align-items-center gap-2">
+                <!-- NOTIFICATIONS -->
+                <div class="dropdown">
+                  <button
+                    class="icon-button position-relative"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    aria-label="View notifications">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="notification-dot"></span>
+                  </button>
+
+                  <div
+                    class="dropdown-menu dropdown-menu-end notification-menu">
+                    <div
+                      class="d-flex justify-content-between align-items-center px-2 py-1">
+                      <h6 class="mb-0">Notifications</h6>
+                      <span class="badge-soft-coral">3 new</span>
+                    </div>
+
+                    <div class="notification-item mt-2">
+                      <span class="notification-icon">
+                        <i class="bi bi-person-plus-fill"></i>
+                      </span>
+
+                      <div>
+                        <p>Three students joined Web Development.</p>
+                        <small>12 minutes ago</small>
+                      </div>
+                    </div>
+
+                    <div class="notification-item">
+                      <span class="notification-icon icon-coral">
+                        <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                      </span>
+
+                      <div>
+                        <p>The monthly report is ready.</p>
+                        <small>2 hours ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- USER -->
+                <a class="user-chip" href="profile.html">
+                  <span class="avatar" data-admin-avatar> OF </span>
+
+                  <span class="user-copy">
+                    <strong data-admin-name> Oleya Fazely </strong>
+
+                    <small data-admin-role> Administrator </small>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </nav>
+
+          <!-- CONTENT -->
+          <div class="container-fluid content-area">
+            <div class="row g-3">
+              <!-- LEFT COLUMN -->
+              <div class="col-12 col-xl-4">
+                <!-- PROFILE CARD -->
+                <section class="card glass-card border-0 mb-3">
+                  <div class="card-body profile-hero py-4">
+                    <div class="profile-avatar">
+                      <span class="avatar" data-profile-avatar> OF </span>
+
+                      <label
+                        class="avatar-upload-btn"
+                        for="avatarInput"
+                        title="Upload profile image">
+                        <i class="bi bi-camera-fill"></i>
+
+                        <span class="visually-hidden">
+                          Upload profile image
+                        </span>
+                      </label>
+
+                      <input
+                        class="visually-hidden"
+                        id="avatarInput"
+                        type="file"
+                        accept="image/jpeg,image/png,image/webp" />
+                    </div>
+
+                    <h2 class="h4 mb-1" data-profile-name>Oleya Fazely</h2>
+
+                    <p class="text-muted-custom mb-3" data-profile-role>
+                      Administrator
+                    </p>
+
+                    <span class="badge-soft-green">
+                      <i class="bi bi-patch-check-fill"></i>
+                      Active account
+                    </span>
+
+                    <p class="small text-muted-custom mt-3 mb-0">
+                      Upload a JPG, PNG or WebP image smaller than 2 MB.
+                    </p>
+                  </div>
+                </section>
+
+                <!-- WORK SUMMARY -->
+                <section class="card glass-card border-0">
+                  <div class="card-header">
+                    <h2 class="section-title">Work Summary</h2>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="row g-2 text-center">
+                      <div class="col-4">
+                        <div class="p-2 rounded-4 bg-white bg-opacity-75">
+                          <p class="stat-value fs-5">2</p>
+                          <span class="stat-label">Years</span>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="p-2 rounded-4 bg-white bg-opacity-75">
+                          <p class="stat-value fs-5">5</p>
+                          <span class="stat-label">Courses</span>
+                        </div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="p-2 rounded-4 bg-white bg-opacity-75">
+                          <p class="stat-value fs-5">128</p>
+                          <span class="stat-label">Tasks</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="activity-item mt-3">
+                      <span class="notification-icon icon-coral">
+                        <i class="bi bi-award-fill"></i>
+                      </span>
+
+                      <div>
+                        <strong class="d-block"> Top administrator </strong>
+
+                        <small class="text-muted-custom">
+                          August 2026 performance
+                        </small>
+                      </div>
+                    </div>
+
+                    <div class="activity-item">
+                      <span class="notification-icon">
+                        <i class="bi bi-clock-fill"></i>
+                      </span>
+
+                      <div>
+                        <strong class="d-block"> Member since </strong>
+
+                        <small class="text-muted-custom">
+                          September 2024
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- RIGHT COLUMN -->
+              <div class="col-12 col-xl-8">
+                <section class="card glass-card border-0">
+                  <div class="card-header">
+                    <h2 class="section-title">Personal Information</h2>
+
+                    <p class="section-copy small mb-0">
+                      Changes also update the profile shown in the top bar.
+                    </p>
+                  </div>
+
+                  <div class="card-body">
+                    <form id="profileForm" novalidate>
+                      <div class="row g-3">
+                        <!-- FIRST NAME -->
+                        <div class="col-md-6">
+                          <label class="form-label" for="profileFirstName">
+                            First name
+                          </label>
+
+                          <input
+                            class="form-control"
+                            id="profileFirstName"
+                            name="firstName"
+                            type="text"
+                            minlength="2"
+                            maxlength="30"
+                            required />
+
+                          <div class="invalid-feedback">
+                            Enter at least two letters.
+                          </div>
+                        </div>
+
+                        <!-- LAST NAME -->
+                        <div class="col-md-6">
+                          <label class="form-label" for="profileLastName">
+                            Last name
+                          </label>
+
+                          <input
+                            class="form-control"
+                            id="profileLastName"
+                            name="lastName"
+                            type="text"
+                            minlength="2"
+                            maxlength="30"
+                            required />
+
+                          <div class="invalid-feedback">
+                            Enter at least two letters.
+                          </div>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="col-md-6">
+                          <label class="form-label" for="profileEmail">
+                            Email address
+                          </label>
+
+                          <input
+                            class="form-control"
+                            id="profileEmail"
+                            name="email"
+                            type="email"
+                            required />
+
+                          <div class="invalid-feedback">
+                            Enter a valid email address.
+                          </div>
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="col-md-6">
+                          <label class="form-label" for="profilePhone">
+                            Phone number
+                          </label>
+
+                          <input
+                            class="form-control"
+                            id="profilePhone"
+                            name="phone"
+                            type="tel"
+                            minlength="7"
+                            maxlength="20"
+                            required />
+
+                          <div class="invalid-feedback">
+                            Enter a valid phone number.
+                          </div>
+                        </div>
+
+                        <!-- ROLE -->
+                        <div class="col-12">
+                          <label class="form-label" for="profileRole">
+                            Role
+                          </label>
+
+                          <select
+                            class="form-select"
+                            id="profileRole"
+                            name="role"
+                            required>
+                            <option value="Administrator">Administrator</option>
+
+                            <option value="Mentor">Mentor</option>
+
+                            <option value="Coordinator">Coordinator</option>
+                          </select>
+                        </div>
+
+                        <!-- BIO -->
+                        <div class="col-12">
+                          <label class="form-label" for="profileBio">
+                            Short bio
+                          </label>
+
+                          <textarea
+                            class="form-control"
+                            id="profileBio"
+                            name="bio"
+                            rows="5"
+                            maxlength="180"
+                            required></textarea>
+
+                          <div class="form-text">Maximum 180 characters.</div>
+
+                          <div class="invalid-feedback">Write a short bio.</div>
+                        </div>
+
+                        <!-- SAVE -->
+                        <div class="col-12 d-flex justify-content-end">
+                          <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-floppy-fill me-1"></i>
+                            Save Changes
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="main.js"></script>
+  </body>
+</html>
+```
