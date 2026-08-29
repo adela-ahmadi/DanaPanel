@@ -380,3 +380,45 @@ topbar {
 .notification-item small {
   color: var(--dana-muted);
 }
+user-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.3rem 0.65rem 0.3rem 0.3rem;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(29, 75, 159, 0.08);
+  border-radius: 999px;
+}
+
+.avatar {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  place-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(135deg, var(--dana-blue), var(--dana-coral));
+  border-radius: 50%;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user-chip strong,
+.user-chip small {
+  display: block;
+  line-height: 1.2;
+}
+.user-chip strong {
+  font-size: 0.78rem;
+}
+.user-chip small {
+  color: var(--dana-muted);
+  font-size: 0.68rem;
+}
