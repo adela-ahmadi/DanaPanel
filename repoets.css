@@ -230,3 +230,34 @@ sidebar-panel .sidebar-nav {
 .sidebar-panel .sidebar-nav .nav-link.active i {
   color: var(--dana-navy);
 }
+semester-card {
+  margin-top: auto;
+  padding: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 1.1rem;
+  backdrop-filter: blur(15px);
+}
+
+.semester-card h6,
+.semester-card p {
+  color: inherit;
+}
+.semester-card p {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.76rem;
+}
+.semester-card .progress {
+  height: 7px;
+  background: rgba(255, 255, 255, 0.18);
+}
+.semester-card .progress-bar {
+  background: linear-gradient(90deg, var(--dana-blush), var(--dana-coral));
+}
+
+/* Top bar and common content */
+.dashboard-main {
+  min-width: 0;
+  background: rgba(247, 249, 254, 0.6);
+}
