@@ -303,4 +303,80 @@ topbar {
   color: #fff;
   background: var(--dana-blue);
 }
+.search-control {
+  position: relative;
+  width: min(310px, 32vw);
+}
 
+.search-control i {
+  position: absolute;
+  top: 50%;
+  left: 0.9rem;
+  z-index: 2;
+  color: #98a3b9;
+  transform: translateY(-50%);
+}
+
+.search-control .form-control {
+  min-height: 42px;
+  padding-left: 2.55rem;
+  background: rgba(255, 255, 255, 0.62);
+  border-color: rgba(29, 75, 159, 0.09);
+  border-radius: 999px;
+}
+
+.search-control .form-control:focus {
+  background: #fff;
+  border-color: rgba(29, 75, 159, 0.28);
+  box-shadow: 0 0 0 0.25rem rgba(29, 75, 159, 0.08);
+}
+
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--dana-coral);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.notification-menu {
+  width: min(340px, calc(100vw - 2rem));
+  padding: 0.7rem;
+  border: 1px solid rgba(29, 75, 159, 0.09);
+  border-radius: 1rem;
+  box-shadow: var(--dana-shadow);
+}
+
+.notification-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.7rem;
+  border-radius: 0.8rem;
+}
+
+.notification-item:hover {
+  background: var(--dana-ice);
+}
+
+.notification-icon {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #fff;
+  background: var(--dana-blue);
+  border-radius: 0.7rem;
+}
+
+.notification-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+.notification-item small {
+  color: var(--dana-muted);
+}
