@@ -1,0 +1,32 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+:root {
+  --dana-navy: #102d73;
+  --dana-blue: #1d4b9f;
+  --dana-coral: #ff5d57;
+  --dana-blush: #ffa7a3;
+  --dana-ice: #f3f6fc;
+  --dana-white: #ffffff;
+  --dana-ink: #15203a;
+  --dana-muted: #73809b;
+  --dana-success: #20a779;
+  --dana-warning: #f2a93b;
+  --dana-danger: #dc4c5b;
+  --dana-border: rgba(255, 255, 255, 0.72);
+  --dana-glass: rgba(255, 255, 255, 0.74);
+  --dana-shadow: 0 18px 50px rgba(23, 45, 91, 0.1);
+  --dana-radius: 1.35rem;
+  --dana-sidebar-width: 250px;
+  --bs-primary: #1d4b9f;
+  --bs-primary-rgb: 29, 75, 159;
+  --bs-danger: #dc4c5b;
+  --bs-danger-rgb: 220, 76, 91;
+  --bs-body-font-family: "DM Sans", sans-serif;
+  --bs-body-color: #15203a;
+  --bs-body-bg: #f3f6fc;
+}
+
+* {
+  box-sizing: border-box;
+}
