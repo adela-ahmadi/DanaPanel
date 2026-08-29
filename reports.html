@@ -165,4 +165,52 @@
               </div>
             </div>
           </nav>
+
+           <div class="container-fluid content-area">
+            <section class="card glass-card border-0 mb-3">
+              <div class="card-body">
+                <div class="row g-3 align-items-end">
+                  <div class="col-12 col-lg">
+                    <div>
+                      <h2 class="section-title">Performance Report</h2>
+                      <p class="section-copy small mb-0">
+                        Filters update the cards, charts and table below.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-2">
+                    <label class="form-label" for="reportPeriod">Period</label
+                    ><select
+                      class="form-select"
+                      id="reportPeriod"
+                      data-report-period>
+                      <option value="3">Last 3 months</option>
+                      <option value="6" selected>Last 6 months</option>
+                    </select>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                    <label class="form-label" for="reportCourse">Course</label
+                    ><select
+                      class="form-select"
+                      id="reportCourse"
+                      data-report-course>
+                      <option>All</option>
+                      <option>Web Development</option>
+                      <option>UI/UX Design</option>
+                      <option>Data Science</option>
+                      <option>Digital Marketing</option>
+                      <option>Business Strategy</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-auto">
+                    <button
+                      class="btn btn-coral w-100"
+                      type="button"
+                      data-export-report>
+                      <i class="bi bi-download me-1"></i>Export CSV
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
 </html>
