@@ -2,7 +2,6 @@
 function initDashboard() {
   const dashboard = document.querySelector("[data-dashboard-page]");
   if (!dashboard) return;
-
   const students = loadData(STORAGE_KEYS.students, defaultStudents);
   const activeStudents = students.filter(
     (student) => student.status === "Active",
@@ -14,7 +13,6 @@ function initDashboard() {
   const activeRate = students.length
     ? Math.round((activeStudents.length / students.length) * 100)
     : 0;
-
   const stats = {
     students: studentAccounts.length,
     courses: courseCount,
@@ -34,7 +32,6 @@ function initDashboard() {
   renderTasks();
   renderDashboardChart(students);
 }
-
 function renderTasks() {
   const taskList = document.querySelector("[data-task-list]");
   if (!taskList) return;
@@ -56,7 +53,6 @@ function renderTasks() {
       )
       .join("");
   };
-
   drawTasks();
   taskList.addEventListener("click", (event) => {
     const button = event.target.closest("[data-task-id]");
@@ -89,12 +85,12 @@ function renderDashboardChart(students) {
         {
           label: "New enrollments",
           data: monthlyEnrollments,
-          borderColor: "#1d4b9f",
+          borderColor: "#00266c",
           backgroundColor: gradient,
           fill: true,
           borderWidth: 3,
           pointRadius: 4,
-          pointBackgroundColor: "#ff5d57",
+          pointBackgroundColor: "#ff453f",
           pointBorderColor: "#ffffff",
           pointBorderWidth: 2,
           tension: 0.38,
