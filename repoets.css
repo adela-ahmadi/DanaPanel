@@ -261,3 +261,46 @@ semester-card {
   min-width: 0;
   background: rgba(247, 249, 254, 0.6);
 }
+
+topbar {
+  z-index: 1010;
+  margin: 0.95rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--dana-glass);
+  border: 1px solid var(--dana-border);
+  border-radius: 1.15rem;
+  box-shadow: 0 10px 35px rgba(19, 43, 88, 0.07);
+  backdrop-filter: blur(20px) saturate(145%);
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
+}
+
+.page-heading h1 {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.page-heading p {
+  margin: 0;
+  color: var(--dana-muted);
+  font-size: 0.78rem;
+}
+
+.mobile-menu-btn,
+.icon-button {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--dana-navy);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(29, 75, 159, 0.09);
+  border-radius: 50%;
+}
+
+.mobile-menu-btn:hover,
+.icon-button:hover {
+  color: #fff;
+  background: var(--dana-blue);
+}
+
