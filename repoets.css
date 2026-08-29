@@ -422,3 +422,25 @@ user-chip {
   color: var(--dana-muted);
   font-size: 0.68rem;
 }
+.content-area {
+  padding: 0.15rem 0.95rem 1.25rem;
+}
+
+.glass-card {
+  height: 100%;
+  background: var(--dana-glass);
+  border: 1px solid var(--dana-border) !important;
+  border-radius: var(--dana-radius);
+  box-shadow: var(--dana-shadow);
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+}
+
+.glass-card .card-header {
+  padding: 1.15rem 1.2rem 0;
+  background: transparent;
+  border: 0;
+}
+.glass-card .card-body {
+  padding: 1.2rem;
+}
