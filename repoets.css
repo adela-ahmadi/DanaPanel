@@ -119,3 +119,73 @@ textarea {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
 }
+/* Sidebar */
+.sidebar-panel {
+  --bs-offcanvas-width: var(--dana-sidebar-width);
+  width: var(--dana-sidebar-width);
+  color: rgba(255, 255, 255, 0.78);
+  background: linear-gradient(
+    165deg,
+    rgba(29, 75, 159, 0.98),
+    rgba(16, 45, 115, 0.99)
+  );
+  border: 0 !important;
+  border-radius: 1.65rem 0 0 1.65rem;
+  box-shadow: 14px 0 38px rgba(16, 45, 115, 0.14);
+}
+
+.sidebar-panel .offcanvas-header,
+.sidebar-panel .offcanvas-body {
+  color: inherit;
+}
+.sidebar-panel .offcanvas-body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #fff;
+}
+
+.brand-link:hover {
+  color: #fff;
+}
+
+.brand-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--dana-navy);
+  background: #fff;
+  border-radius: 0.9rem;
+  box-shadow: 0 8px 22px rgba(7, 25, 67, 0.2);
+}
+
+.brand-mark i {
+  font-size: 1.2rem;
+}
+
+.brand-name {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.brand-name span {
+  color: var(--dana-blush);
+}
+
+.sidebar-label {
+  margin: 1.5rem 0 0.55rem;
+  padding-left: 0.8rem;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
