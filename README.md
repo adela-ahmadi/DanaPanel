@@ -122,8 +122,7 @@ Replace the placeholder rows with the real member names and exact work before su
 | Susan Sultani                 | `feature/students-crud`    | Student table, CRUD and validation                            |
 | Forough Ahadi                 | `feature/reports`          | Reports, charts, filters and CSV export                       |
 | Oleya Fazely                  | `feature/profile-settings` | Profile, settings and responsive QA                           |
-| Atefa Amini                   | `feature/profile-settings` | Reports, charts, filters and CSV export                           |
-
+| Atefa Amini                   | `feature/profile-settings` | Reports, charts, filters and CSV export                       |
 
 ## Important Before Submission
 
